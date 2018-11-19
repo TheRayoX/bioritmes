@@ -15,29 +15,29 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
+        	<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+			  <a class="navbar-brand text-light" href="#">home </a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			 	 </button>
+			  	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			    <div class="navbar-nav">
+			      <a class="nav-item nav-link text-light" href="#">index</a>
+			      <a class="nav-item nav-link text-light" href="#">pagina1</a>
+			      <a class="nav-item nav-link text-light" href="#">pagina2</a>
+			    </div>
+			  </div>
+			</nav>
             <div class="container">
-                <div class="title m-b-md">
-                    @yield('header')
-                </div>
-
-                <div class="links">
                     @yield('content')
-                </div>
             </div>
-        </div>
+            <div class="container-fluid bg-dark" style="position:fixed;bottom:0px;">
+    			<div class="row">
+    				<div class="col-8 offset-2">
+    					<p class="text-light text-center mt-4 small">Terms of Use | Privacy Policy | Mobile site<br/>2018 Copyright By Viox and TheRayoX<br/>All Rights Reserved</p>
+    				</div>
+    			</div>
+			</div>
+       </div>
     </body>
 </html>
