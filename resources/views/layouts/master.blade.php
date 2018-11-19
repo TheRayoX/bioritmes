@@ -23,13 +23,15 @@
 			    <span class="navbar-toggler-icon"></span>
 			 	</button>
 			  	<div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-			    <div class="navbar-nav">
-			      <a class="nav-item nav-link text-light border border-dark" href="index.php">Inicio</a>
-			      <a class="nav-item nav-link text-light border border-dark" href="#">INICIO</a>
-            <a class="nav-link nav-item disabled border border-dark" href="#">Resultado</a>
-			    </div>
+			    <nav class="cl-effect-14" style="margin-left:-10px;">
+			      <a class="text-light mr-5" href="index.php" style="text-decoration:none;">Inicio</a>
+			      <a class="text-light mr-5" href="#" style="text-decoration:none;">INICIO</a>
+            <a class="text-light" href="#" style="text-decoration:none;">Resultado</a>
+          </nav>
 			  </div>
-			</nav>
+      </nav>
+        
+
         <div class="container-fluid" style="height:100%;">
             <div class="row">
             <div class="container">
