@@ -36,7 +36,7 @@
         día crítico. De esta manera determinaron que había una propensión a los accidentes o 
         enfermedades mayor en algunos días determinados.
     </p>
-    <p>
+    <p class="text-justify">
         Aunque esta teoría tiene poco fundamento científico, por el contrario, si que tiene 
         bastante base estadística, y cualquiera de nosotros lo puede comprobar, sólo hay que 
         ver los datos de los biorritmos de algún familiar o amigo a la fecha de su muerte, o 
