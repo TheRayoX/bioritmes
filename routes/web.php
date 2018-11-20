@@ -24,3 +24,8 @@ Route::get('/avisolegal', function(){
 Route::get('/cookies', function(){
     return view('cookies');
 });
+
+/* PROVISIONAL */
+Route::get('/contacto', function(){
+    return view('contacto');
+});

@@ -52,7 +52,7 @@
                     <a class="text-light mr-5" href="/avisolegal" style="text-decoration:none;">Aviso Legal</a>
                     <a class="text-light mr-5" href="/cookies" style="text-decoration:none;">Cookies</a>
                     <a class="text-light mr-5" href="#" style="text-decoration:none;">Resultado</a>
-                    <a class="text-light" href="#" style="text-decoration:none;">Contacto</a>
+                    <a class="text-light" href="/contacto" style="text-decoration:none;">Contacto</a>
                   </nav>
                 </div>
               </nav>
