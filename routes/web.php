@@ -11,18 +11,16 @@
 |
 */
 
-Route::get('/', function() {
-    return view('index');
-});
+Route::get('/', 'bioController@index');
 
-Route::get('/login', function() {
-    return view('login');
-});
+Route::get('/login', 'bioController@index'); 
 
-Route::get('/form', function() {
-    return view('form');
-});
+Route::get('/form', 'bioController@index');
+Route::get('/save', 'bioController@store');
 
 Route::get('/avisolegal', function(){
     return view('avisolegal');
+});
+Route::get('/cookies', function(){
+    return view('cookies');
 });
