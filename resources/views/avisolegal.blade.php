@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('content')
 
-<div class="container text-justify mt-3" style="font-size:15px;">
+<div class="container text-justify mt-5" style="font-size:15px;">
     <h3 class="ml-5" style="font-weight:bold;">1.- Objeto </h3>
         <p>
             Estas condiciones generales (en adelante las "Condiciones Generales") 
@@ -160,8 +160,4 @@
             Tribunales de Granada (ESPAÑA).  
         </p>
 </div>
-<p>
-            
-        </p>
-
 @stop
