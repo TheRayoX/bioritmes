@@ -1,3 +1,11 @@
+html {
+    position: relative;
+    min-height: 100%;
+    scroll-behavior: smooth;
+  }
+  body {
+    margin-bottom: 125px;
+  }
 *,
 *:after,
 *::before {
@@ -83,3 +91,8 @@ nav a {
 	-moz-transform: rotate(0deg) translateX(50%);
 	transform: rotate(0deg) translateX(50%);
 }
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }

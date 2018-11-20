@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function() {
     return view('index');
 });
 
@@ -19,6 +19,10 @@ Route::get('/login', function() {
     return view('login');
 });
 
-Route::get('/form', function () {
+Route::get('/form', function() {
     return view('form');
+});
+
+Route::get('/avisolegal', function(){
+    return view('avisolegal');
 });
