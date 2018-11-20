@@ -14,7 +14,16 @@ class bioController extends Controller
      */
     public function index(Request $request)
     {
+        $ruta = $request->path();
+        if($ruta == '/'){
         return view('index');
+        }
+        else if($ruta == 'login'){
+        return view('login');
+        }
+        else if ($ruta == 'form'){
+        return view('form');
+        }
     }
 
     /**
@@ -35,6 +44,16 @@ class bioController extends Controller
      */
     public function store(Request $request)
     {
+        //inicio validacion
+
+
+
+        //fin validacion
+        $usuario = new usuario();
+        $usuario->setNombre($request->input('nombre'));
+        $usuario->setFechaNacimiento($request->input('fechaNacimiento'));
+        $request->session()->put('usuario',$usuario);
+        
          
     }
 
