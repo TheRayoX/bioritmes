@@ -13,5 +13,6 @@ class grafico extends Model
 
     public function calcularBiorritmo(){
 
+        
     }
 }
