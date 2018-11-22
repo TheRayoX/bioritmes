@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'bioController@index');
+Route::get('/', 'graphController@index');
 
 Route::get('/login', 'bioController@index'); 
 
