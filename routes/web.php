@@ -11,14 +11,14 @@
 |
 */
 
-Route::get('/', 'graphController@index');
+Route::get('/', 'graphController@create');
 
 Route::get('/login', 'bioController@index'); 
 
 Route::post('/form', 'bioController@store');
 Route::get('/form', 'bioController@index');
 
-Route::get('/pene','bioController@create');
+Route::get('/graficos','graphController@index');
 
 Route::get('/avisolegal', function(){
     return view('avisolegal');

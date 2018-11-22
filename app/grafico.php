@@ -55,4 +55,11 @@ class grafico extends Model
     public function calculaEmocional(){
 
     }
+    public function convertirFecha(){
+    	$time = strtotime($this->fecha);
+
+		$newformat = date('Y-m-d',$time);
+
+		$this->fecha=$newformat;
+    }
 }

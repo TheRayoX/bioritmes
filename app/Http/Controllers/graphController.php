@@ -12,6 +12,7 @@ class graphController extends Controller
     public function index(Request $request){
         $usuario = $request->session()->get('nuevoUsuario');
         $grafico = new grafico();
+        $grafico->setFecha($usuario->getFechaNacimiento());
     }
 
     public function create(){

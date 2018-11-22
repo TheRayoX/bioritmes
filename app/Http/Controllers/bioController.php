@@ -58,7 +58,7 @@ class bioController extends Controller
         $usuario->setNombre($nombre);
         $usuario->setFechaNacimiento($fecha);
         $request->session()->put('nuevoUsuario',$usuario);
-        return redirect('/pene');
+        return redirect('/graficos');
         
 
     }
