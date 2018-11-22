@@ -5,8 +5,10 @@
   <h2>Calcular Biorritmos</h2>
   <div class="row">
     <div class="col-4 offset-4 mt-3">
+    	@include('error')
       <!-- INICIO FORMULARIO -->
       <form method="get" action="/save">
+      	{{ csrf_field() }}
         <div class="form-group">
           <label for="nombre">Nombre</label>
           <input type="text" class="form-control" name="nombre">

@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\formulario;
 use Illuminate\Http\Request;
 use App\usuario;
+
 
 class bioController extends Controller
 {
@@ -42,19 +44,10 @@ class bioController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(formulario $request)
     {
-        //inicio validacion
-
-
-
-        //fin validacion
-        $usuario = new usuario();
-        $usuario->setNombre($request->input('nombre'));
-        $usuario->setFechaNacimiento($request->input('fechaNacimiento'));
-        $request->session()->put('usuario',$usuario);
-        
-         
+        //guarda la validación hecha en el formulario
+        $validated = $request->validated();  
     }
 
     /**

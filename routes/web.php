@@ -15,8 +15,9 @@ Route::get('/', 'bioController@index');
 
 Route::get('/login', 'bioController@index'); 
 
-Route::get('/form', 'bioController@index');
 Route::get('/save', 'bioController@store');
+Route::redirect('/error', '/login');
+Route::redirect('/form', '/login');
 
 Route::get('/avisolegal', function(){
     return view('avisolegal');
