@@ -3,7 +3,7 @@
     Error 504
 @stop
 @section('contenido')
-<body style="margin:0px;overflow:hidden; background-size:auto; height: 100%; width:100%; background-repeat:no-repeat; background-image:url('https://cdn.pixabay.com/photo/2018/05/13/12/53/network-3396348_1280.jpg')">
+<body style="margin:0px;overflow:hidden; background-size:auto; height: 100%; width:100%; background-repeat:no-repeat; background-image:url('/img/500s.jpg')">
     <div class="container pl-5">
         <div class="row">
             <div class="col-12 text-center" style="color:white;">

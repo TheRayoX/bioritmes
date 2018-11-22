@@ -17,7 +17,7 @@ class graphController extends Controller
              ->addNumberColumn('Max Temp')
              ->addNumberColumn('Mean Temp')
              ->addNumberColumn('Min Temp')
-             ->addRow(['2014-10-1',  -10, 65, 62])
+             ->addRow(['2014-10-1', -100, 65, 62])
              ->addRow(['2014-10-2',  68, 65, 61])
              ->addRow(['2014-10-3',  68, 62, 55])
              ->addRow(['2014-10-4',  72, 62, 52])

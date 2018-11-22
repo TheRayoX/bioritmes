@@ -3,7 +3,7 @@
     Error 403
 @stop
 @section('contenido')
-<body style="margin:0px;overflow:hidden; background-size:auto; height: 100%; width:100%; background-repeat:no-repeat; background-image:url('https://cdn.pixabay.com/photo/2018/01/04/00/19/mountains-3059528_1280.jpg')">
+<body style="margin:0px;overflow:hidden; background-size:auto; height: 100%; width:100%; background-repeat:no-repeat; background-image:url('/img/403.jpg')">
     <div class="container pl-5">
         <div class="row">
             <div class="col-12 text-center">

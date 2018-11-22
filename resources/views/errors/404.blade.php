@@ -3,7 +3,7 @@
     Error 404
 @stop
 @section('contenido')
-<body style="margin:0px;overflow:hidden; background-size:auto; height: 100%; width:100%; background-repeat:no-repeat; background-image:url('https://cdn.pixabay.com/photo/2018/11/07/23/51/chess-3801531_1280.jpg')">
+<body style="margin:0px;overflow:hidden; background-size:auto; height: 100%; width:100%; background-repeat:no-repeat; background-image:url('/img/404.jpg')">
     <div class="container pl-5">
         <div class="row">
             <div class="col-7 offset-5 text-right">

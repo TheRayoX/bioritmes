@@ -3,7 +3,7 @@
     Error 400
 @stop
 @section('contenido')
-<body style="margin:0px;overflow:hidden; background-size:auto; height: 100%; width:100%; background-repeat:no-repeat; background-image:url('https://cdn.pixabay.com/photo/2017/02/06/16/17/wolf-2043464_1280.jpg')">
+<body style="margin:0px;overflow:hidden; background-size:auto; height: 100%; width:100%; background-repeat:no-repeat; background-image:url('/img/400.jpg')">
     <div class="container pl-5">
         <div class="row">
             <div class="col-5 text-center">
