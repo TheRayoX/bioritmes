@@ -17,7 +17,7 @@ class graphController extends Controller
              ->addNumberColumn('Max Temp')
              ->addNumberColumn('Mean Temp')
              ->addNumberColumn('Min Temp')
-             ->addRow(['2014-10-1', -100, 65, 62])
+             ->addRow(['2014-10-1',  60, 65, 62])
              ->addRow(['2014-10-2',  68, 65, 61])
              ->addRow(['2014-10-3',  68, 62, 55])
              ->addRow(['2014-10-4',  72, 62, 52])
@@ -34,7 +34,19 @@ class graphController extends Controller
              ->addRow(['2014-10-15', 76, 72, 68])
              ->addRow(['2014-10-16', 71, 66, 60])
              ->addRow(['2014-10-17', 72, 66, 60])
-             ->addRow(['2014-10-18', 63, 62, 62]);
+             ->addRow(['2014-10-18', 78, 42, 62])
+             ->addRow(['2014-10-19', 68, 62, 62])
+             ->addRow(['2014-10-20', 64, 62, 62])
+             ->addRow(['2014-10-21', 59, 62, 62])
+             ->addRow(['2014-10-22', 38, 62, 62])
+             ->addRow(['2014-10-23', 87, 62, 62])
+             ->addRow(['2014-10-24', 75, 62, 62])
+             ->addRow(['2014-10-25', 40, 62, 62])
+             ->addRow(['2014-10-26', 10, 62, 62])
+             ->addRow(['2014-10-27', 25, 62, 62])
+             ->addRow(['2014-10-28', 39, 62, 62])
+             ->addRow(['2014-10-29', 58, 62, 62])
+             ->addRow(['2014-10-30', 63, 62, 62]);
 
         $lava->LineChart('Temps', $temperatures, [
             'title' => 'Weather in October'
