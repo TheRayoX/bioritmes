@@ -53,7 +53,24 @@ class grafico extends Model
     }
 
     public function calculaEmocional(){
+    	$dias = $this->diasDiferencia();
 
+
+    }
+    public function calculaFisico(){
+    	$dias = $this->diasDiferencia();
+    	
+
+    }
+    public function calculaIntelectual(){
+    	$dias = $this->diasDiferencia();
+    	
+
+    }
+    public function fechaSistema(){
+    date_default_timezone_set('Europe/Madrid');
+	$date = date('Y-m-d', time());
+	$this->fechaSistema = $date;
     }
     public function convertirFecha(){
     	$time = strtotime($this->fecha);
@@ -62,4 +79,13 @@ class grafico extends Model
 
 		$this->fecha=$newformat;
     }
+    public function diasDiferencia(){
+    	$this->convertirFecha();
+    	$this->fechaSistema();
+    	$datetime1 = date_create($this->fecha);
+		$datetime2 = date_create($this->fechaSistema);
+    	$interval = date_diff($datetime1,$datetime2);
+		$resultado = $interval->format('%a');
+		return $resultado;
+	}
 }
