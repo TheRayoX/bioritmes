@@ -3,7 +3,8 @@
     Error 500
 @stop
 @section('contenido')
-<body style="margin:0px;overflow:hidden; background-size:auto; height: 100%; width:100%; background-repeat:no-repeat; background-image:url('/img/500s.jpg')">
+<body>
+    <div class="bgimg-2">
     <div class="container pl-5">
         <div class="row">
             <div class="col-12 text-center" style="color:white;">
@@ -15,5 +16,6 @@
             </div>
         </div>
     </div>
+</div>
 </body>
 @stop

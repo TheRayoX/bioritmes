@@ -3,7 +3,8 @@
     Error 404
 @stop
 @section('contenido')
-<body style="margin:0px;overflow:hidden; background-size:auto; height: 100%; width:100%; background-repeat:no-repeat; background-image:url('/img/404.jpg')">
+<body>
+    <div class="bgimg-1">
     <div class="container pl-5">
         <div class="row">
             <div class="col-7 offset-5 text-right">
@@ -15,5 +16,6 @@
             </div>
         </div>
     </div>
+</div>
 </body>
 @stop
