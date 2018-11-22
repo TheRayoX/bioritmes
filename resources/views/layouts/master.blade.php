@@ -28,7 +28,7 @@
 			  	  <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
               <nav class="cl-effect-14" style="margin-left:-10px;">
                 <a class="text-light mr-5" href="/" style="text-decoration:none;">Inicio</a>
-                <a class="text-light mr-5" href="#" style="text-decoration:none;">Calculadora</a>
+                <a class="text-light mr-5" href="/login" style="text-decoration:none;">Calculadora</a>
                 <a class="text-light" href="#" style="text-decoration:none;">Resultado</a>
               </nav>
 			    </div>
