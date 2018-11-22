@@ -15,9 +15,9 @@ Route::get('/', 'graphController@index');
 
 Route::get('/login', 'bioController@index'); 
 
-Route::get('/save', 'bioController@store');
-Route::redirect('/error', '/login');
-Route::redirect('/form', '/login');
+Route::post('/form', 'bioController@store');
+
+Route::get('/pene','bioController@create');
 
 Route::get('/avisolegal', function(){
     return view('avisolegal');

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\usuario;
 
 
+
 class bioController extends Controller
 {
     /**
@@ -23,9 +24,7 @@ class bioController extends Controller
         else if($ruta == 'login'){
         return view('login');
         }
-        else if ($ruta == 'form'){
-        return view('form');
-        }
+       
     }
 
     /**
@@ -33,9 +32,11 @@ class bioController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $usuario = $request->session()->get('nuevoUsuario');
+        return view('form')->with('validated',$usuario);
+       
     }
 
     /**
@@ -47,8 +48,18 @@ class bioController extends Controller
     public function store(formulario $request)
     {
         //guarda la validación hecha en el formulario
-        $validated = $request->validated();  
+        $validated = $request->validated();
+        $usuario = new usuario();
+        $nombre = $validated['nombre'];
+        $fecha = $validated['fechaNacimiento'];
+        $usuario->setNombre($nombre);
+        $usuario->setFechaNacimiento($fecha);
+        $request->session()->put('nuevoUsuario',$usuario);
+        return redirect('/pene');
+        
+
     }
+    
 
     /**
      * Display the specified resource.

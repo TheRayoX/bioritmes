@@ -7,7 +7,7 @@
     <div class="col-4 offset-4 mt-3">
     	@include('error')
       <!-- INICIO FORMULARIO -->
-      <form method="get" action="/save">
+      <form method="post" action="/form">
       	{{ csrf_field() }}
         <div class="form-group">
           <label for="nombre">Nombre</label>

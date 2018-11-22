@@ -4,6 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+
 class formulario extends FormRequest
 {
     /**
@@ -35,4 +36,5 @@ class formulario extends FormRequest
         'fechaNacimiento.required'=>'El campo fecha de nacimiento es obligatorio'
          ];
     }
+   
 }
