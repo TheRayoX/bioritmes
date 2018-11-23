@@ -13,7 +13,7 @@ class graphController extends Controller
         $usuario = $request->session()->get('nuevoUsuario');
         $grafico = new grafico();
         $grafico->setFecha($usuario->getFechaNacimiento());
-        $grafico->calculaEmocional();
+        $grafico->calcularBiorritmo();
     }
 
     public function create(){

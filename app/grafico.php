@@ -48,22 +48,36 @@ class grafico extends Model
     }
 
     public function calcularBiorritmo(){
-
-        
-    }
+    	$this->calculaEmocional();
+    	$this->calculaFisico();
+    	$this->calculaIntelectual();
+    	echo $this->fisico.'<br>';
+    	echo $this->emocional.'<br>';
+    	echo $this->intelectual.'<br>';
+        }
 
     public function calculaEmocional(){
+    	//1 ciclo 28 dias
     	$dias = $this->diasDiferencia();
+    	$arrayEmocional;
+    	$this->emocional=round((sin((M_PI*2*$dias)/28))*100);
+    	
 
 
     }
     public function calculaFisico(){
+    	//1 ciclo 23 dias
     	$dias = $this->diasDiferencia();
+    	$arrayFisico;
+    	$this->fisico=round((sin((M_PI*2*$dias)/23))*100);
     	
 
     }
     public function calculaIntelectual(){
+    	//1 ciclo 33 dias
     	$dias = $this->diasDiferencia();
+    	$arrayIntelectual;
+    	$this->intelectual=round((sin((M_PI*2*$dias)/33))*100);
     	
 
     }
