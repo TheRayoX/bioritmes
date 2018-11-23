@@ -46,38 +46,66 @@ class grafico extends Model
     public function setIntelectual($intelectual){
         $this->intelectual=$intelectual;
     }
-
+//De momento he añadido al array correspondiente el valor de todos los dias en un periodo de 30, donde el dia de hoy és el 15
+//He comprobado que funciona correctamente con algunas calculadoras de internet, te dejo los echo hechos para que puedas consultar
     public function calcularBiorritmo(){
     	$this->calculaEmocional();
     	$this->calculaFisico();
     	$this->calculaIntelectual();
-    	echo $this->fisico.'<br>';
-    	echo $this->emocional.'<br>';
-    	echo $this->intelectual.'<br>';
+    		echo "emocional".'<br>';
+    	for($i=0;$i<=30;$i++){
+    		echo 'Dia '.$i.": ".$this->emocional[$i].'<br>';
+    	}
+    		echo "fisico".'<br>';
+    	for($i=0;$i<=30;$i++){
+    		echo 'Dia '.$i.": ".$this->fisico[$i].'<br>';
+    	}
+    		echo "intelectual".'<br>';
+    	for($i=0;$i<=30;$i++){
+    		echo 'Dia '.$i.": ".$this->intelectual[$i].'<br>';
+    	}
         }
 
     public function calculaEmocional(){
     	//1 ciclo 28 dias
     	$dias = $this->diasDiferencia();
-    	$arrayEmocional;
-    	$this->emocional=round((sin((M_PI*2*$dias)/28))*100);
-    	
-
-
+    	for($i=15;$i>=0;$i--){
+    	$this->emocional[$i]=round((sin((M_PI*2*$dias)/28))*100);
+    	$dias = $dias-1;
+    	}
+    	$dias = $this->diasDiferencia()+1;
+    	for($i=16;$i<=30;$i++){
+    	$this->emocional[$i]=round((sin((M_PI*2*$dias)/28))*100);
+    	$dias = $dias+1;
+    	}
     }
     public function calculaFisico(){
     	//1 ciclo 23 dias
     	$dias = $this->diasDiferencia();
-    	$arrayFisico;
-    	$this->fisico=round((sin((M_PI*2*$dias)/23))*100);
+    	for($i=15;$i>=0;$i--){
+    	$this->fisico[$i]=round((sin((M_PI*2*$dias)/23))*100);
+    	$dias = $dias-1;
+    	}
+    	$dias = $this->diasDiferencia()+1;
+    	for($i=16;$i<=30;$i++){
+    	$this->fisico[$i]=round((sin((M_PI*2*$dias)/23))*100);
+    	$dias = $dias+1;
+    	}
     	
 
     }
     public function calculaIntelectual(){
     	//1 ciclo 33 dias
     	$dias = $this->diasDiferencia();
-    	$arrayIntelectual;
-    	$this->intelectual=round((sin((M_PI*2*$dias)/33))*100);
+    	for($i=15;$i>=0;$i--){
+    	$this->intelectual[$i]=round((sin((M_PI*2*$dias)/33))*100);
+    	$dias = $dias-1;
+    	}
+    	$dias = $this->diasDiferencia()+1;
+    	for($i=16;$i<=30;$i++){
+    	$this->intelectual[$i]=round((sin((M_PI*2*$dias)/33))*100);
+    	$dias = $dias+1;
+    	}
     	
 
     }
