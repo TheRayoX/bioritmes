@@ -1,7 +1,11 @@
 @extends('layouts.master')
-
 @section('content')
-                
-<h1><?php dd($validated)?></h1>
-                
+<div class="container m-auto" style="width:65%;">
+<div id="chart-div" class="mt-5">
+      {!! $lava->render('LineChart', 'bioR', 'chart-div') !!}
+</div>
+</div>
+<div class="container text-justify mt-3" style="font-size:14px;">
+
+</div>
 @stop

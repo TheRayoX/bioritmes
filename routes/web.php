@@ -11,12 +11,12 @@
 |
 */
 
-Route::get('/', 'graphController@create');
+Route::get('/', 'bioController@index');
 
 Route::get('/login', 'bioController@index'); 
 
 Route::post('/form', 'bioController@store');
-Route::get('/form', 'bioController@index');
+Route::get('/form', 'graphController@create');
 
 Route::get('/graficos','graphController@index');
 

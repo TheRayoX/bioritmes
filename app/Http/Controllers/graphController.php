@@ -16,7 +16,7 @@ class graphController extends Controller
         $grafico->calcularBiorritmo();
         $request->session()->put('nuevoGrafico',$grafico);
         $this->create($request);
-        return redirect('/');
+        return redirect('/form');
     }
 
     public function create(Request $request){
@@ -65,7 +65,7 @@ class graphController extends Controller
         $lava->LineChart('bioR', $biorritmo, [
             'title' => 'afas'
         ]);
-        return view('index', [
+        return view('form', [
             'lava'      => $lava
         ]);
     }

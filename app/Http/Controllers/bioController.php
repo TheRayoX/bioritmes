@@ -25,7 +25,7 @@ class bioController extends Controller
         return view('login');
         }
         else if($ruta == 'form'){
-        return redirect('/login');
+        return view('form');
         }
        
     }
