@@ -11,7 +11,14 @@ class grafico extends Model
     private $fisico;
     private $intelectual;
     private $emocional;
+    private $fechas;
 
+    public function getFechas(){
+        return $this->fechas;
+    }
+    public function setFechas($fechas){
+        $this->fechas = $fechas;
+    }
     public function getFecha(){
         return $this->fecha;
     }
@@ -51,7 +58,8 @@ class grafico extends Model
     public function calcularBiorritmo(){
     	$this->calculaEmocional();
     	$this->calculaFisico();
-    	$this->calculaIntelectual();
+        $this->calculaIntelectual();
+        $this->calculaFecha();
         }
 
     public function calculaEmocional(){
@@ -79,8 +87,6 @@ class grafico extends Model
     	$this->fisico[$i]=round((sin((M_PI*2*$dias)/23))*100);
     	$dias = $dias+1;
     	}
-    	
-
     }
     public function calculaIntelectual(){
     	//1 ciclo 33 dias
@@ -94,8 +100,6 @@ class grafico extends Model
     	$this->intelectual[$i]=round((sin((M_PI*2*$dias)/33))*100);
     	$dias = $dias+1;
     	}
-    	
-
     }
     public function fechaSistema(){
     date_default_timezone_set('Europe/Madrid');
@@ -104,9 +108,7 @@ class grafico extends Model
     }
     public function convertirFecha(){
     	$time = strtotime($this->fecha);
-
 		$newformat = date('Y-m-d',$time);
-
 		$this->fecha=$newformat;
     }
     public function diasDiferencia(){
@@ -117,5 +119,21 @@ class grafico extends Model
     	$interval = date_diff($datetime1,$datetime2);
 		$resultado = $interval->format('%a');
 		return $resultado;
-	}
+    }
+    public function calculaFecha(){
+        $contador = 0;
+        for($i=15;$i>=0;$i--){
+            $this->fechaSistema();
+            $datetime = date('Y-m-d', strtotime($this->fechaSistema."- $contador days"));
+            $this->fechas[$i] = $datetime;
+            $contador++;
+            }
+        $contador = 1;
+        for($i=16;$i<=30;$i++){
+            $this->FechaSistema();
+            $datetime = date('Y-m-d', strtotime($this->fechaSistema."+ $contador days"));
+            $this->fechas[$i] = $datetime;
+            $contador++;
+            }
+    }
 }
