@@ -52,18 +52,6 @@ class grafico extends Model
     	$this->calculaEmocional();
     	$this->calculaFisico();
     	$this->calculaIntelectual();
-    		echo "emocional".'<br>';
-    	for($i=0;$i<=30;$i++){
-    		echo 'Dia '.$i.": ".$this->emocional[$i].'<br>';
-    	}
-    		echo "fisico".'<br>';
-    	for($i=0;$i<=30;$i++){
-    		echo 'Dia '.$i.": ".$this->fisico[$i].'<br>';
-    	}
-    		echo "intelectual".'<br>';
-    	for($i=0;$i<=30;$i++){
-    		echo 'Dia '.$i.": ".$this->intelectual[$i].'<br>';
-    	}
         }
 
     public function calculaEmocional(){
