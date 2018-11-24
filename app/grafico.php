@@ -136,4 +136,7 @@ class grafico extends Model
             $contador++;
             }
     }
+
+	
+
 }

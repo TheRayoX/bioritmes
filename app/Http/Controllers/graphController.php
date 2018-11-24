@@ -22,6 +22,7 @@ class graphController extends Controller
     public function create(Request $request){
         $lava = new Lavacharts;
         $grafico = $request->session()->get('nuevoGrafico');
+        $fecha = $grafico->calcularDias();
         $emocional = $grafico->getEmocional();
         $fisico = $grafico->getFisico();
         $intelectual = $grafico->getIntelectual();
@@ -31,6 +32,7 @@ class graphController extends Controller
              ->addNumberColumn('Emocional')
              ->addNumberColumn('Físico')
              ->addNumberColumn('Intelectual')
+<<<<<<< Updated upstream
              ->addRow([$fechas[0], $emocional[0] , $fisico[0], $intelectual[0]])
              ->addRow([$fechas[1], $emocional[1] , $fisico[1], $intelectual[1]])
              ->addRow([$fechas[2], $emocional[2] , $fisico[2], $intelectual[2]])
@@ -62,6 +64,7 @@ class graphController extends Controller
              ->addRow([$fechas[28], $emocional[28] , $fisico[28], $intelectual[28]])
              ->addRow([$fechas[29], $emocional[29] , $fisico[29], $intelectual[29]])
              ->addRow([$fechas[30], $emocional[30] , $fisico[30], $intelectual[30]]);
+
         $lava->LineChart('bioR', $biorritmo, [
             'title' => 'afas'
         ]);
