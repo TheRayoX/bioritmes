@@ -13,6 +13,10 @@ class grafico extends Model
     private $emocional;
     private $fechas;
 
+    public function __construct(){
+    $this->fechaSistema();
+    }
+
     public function getFechas(){
         return $this->fechas;
     }
@@ -55,13 +59,14 @@ class grafico extends Model
     }
 //De momento he añadido al array correspondiente el valor de todos los dias en un periodo de 30, donde el dia de hoy és el 15
 //He comprobado que funciona correctamente con algunas calculadoras de internet, te dejo los echo hechos para que puedas consultar
+//funcion que engloba todos los calculos que necesita el gràfico
     public function calcularBiorritmo(){
     	$this->calculaEmocional();
     	$this->calculaFisico();
         $this->calculaIntelectual();
         $this->calculaFecha();
         }
-
+//calculos de cada uno de los biorritmos
     public function calculaEmocional(){
     	//1 ciclo 28 dias
     	$dias = $this->diasDiferencia();
@@ -101,41 +106,52 @@ class grafico extends Model
     	$dias = $dias+1;
     	}
     }
+    //coge la fecha actual del sistema al entrar desde el login
     public function fechaSistema(){
     date_default_timezone_set('Europe/Madrid');
 	$date = date('Y-m-d', time());
 	$this->fechaSistema = $date;
     }
+    //convierte la fecha de nacimiento al formato deseado
     public function convertirFecha(){
     	$time = strtotime($this->fecha);
 		$newformat = date('Y-m-d',$time);
 		$this->fecha=$newformat;
     }
+    //convierte la fecha del sistema al formato deseado
+    public function convertirFechaSistema(){
+    	$time = strtotime($this->fechaSistema);
+		$newformat = date('Y-m-d',$time);
+		$this->fechaSistema=$newformat;
+    }
+    //calcula la diferencia entre las dos fechas y devuelve los dias
     public function diasDiferencia(){
     	$this->convertirFecha();
-    	$this->fechaSistema();
+    	$this->convertirFechaSistema();
     	$datetime1 = date_create($this->fecha);
 		$datetime2 = date_create($this->fechaSistema);
     	$interval = date_diff($datetime1,$datetime2);
 		$resultado = $interval->format('%a');
 		return $resultado;
     }
+    //calcula a partir de la fecha del sistema / o la dada por el usuario 15 dias antes y 15 dias despues
     public function calculaFecha(){
         $contador = 0;
         for($i=15;$i>=0;$i--){
-            $this->fechaSistema();
+            $this->convertirFechaSistema();
             $datetime = date('Y-m-d', strtotime($this->fechaSistema."- $contador days"));
             $this->fechas[$i] = $datetime;
             $contador++;
             }
         $contador = 1;
         for($i=16;$i<=30;$i++){
-            $this->FechaSistema();
+            $this->convertirFechaSistema();
             $datetime = date('Y-m-d', strtotime($this->fechaSistema."+ $contador days"));
             $this->fechas[$i] = $datetime;
             $contador++;
             }
     }
+   
 
 	
 

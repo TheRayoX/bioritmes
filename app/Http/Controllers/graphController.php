@@ -12,8 +12,6 @@ class graphController extends Controller
     public function index(Request $request){
         $usuario = $request->session()->get('nuevoUsuario');
         $grafico = new grafico();
-        $grafico->setFecha($usuario->getFechaNacimiento());
-        $grafico->calcularBiorritmo();
         $request->session()->put('nuevoGrafico',$grafico);
         $this->create($request);
         return redirect('/form');
@@ -22,7 +20,10 @@ class graphController extends Controller
     public function create(Request $request){
         $lava = new Lavacharts;
         $grafico = $request->session()->get('nuevoGrafico');
-        $fechas = $grafico->calculaFecha();
+        $usuario = $request->session()->get('nuevoUsuario');
+        $grafico->setFecha($usuario->getFechaNacimiento());
+        $grafico->calcularBiorritmo();
+        $grafico->calculaFecha();
         $emocional = $grafico->getEmocional();
         $fisico = $grafico->getFisico();
         $intelectual = $grafico->getIntelectual();
@@ -70,5 +71,29 @@ class graphController extends Controller
         return view('form', [
             'lava'      => $lava
         ]);
+    }
+     public function store(Request $request)
+    {
+        //guarda la validación hecha en el formulario
+        $usuario = $request->session()->get('nuevoUsuario');
+        $grafico = $request->session()->get('nuevoGrafico');
+        if($request->input('fechaNacimiento')!=""){
+        $fecha = $request->input('fechaNacimiento');
+    }
+         if($request->input('fechaSistema')!=""){
+        $fechaSistema = $request->input('fechaSistema');
+    }
+        if($fecha<$fechaSistema){
+          $usuario->setFechaNacimiento($fecha);
+          $grafico->setFechaSistema($fechaSistema);
+      }
+        else{
+            //eror
+        }
+
+         $this->create($request);
+        return redirect('/form');
+        
+
     }
 }

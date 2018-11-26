@@ -17,6 +17,7 @@ Route::get('/login', 'bioController@index');
 
 Route::post('/form', 'bioController@store');
 Route::get('/form', 'graphController@create');
+Route::post('/form2', 'graphController@store');
 
 Route::get('/graficos','graphController@index');
 
