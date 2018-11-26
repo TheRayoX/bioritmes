@@ -4,8 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-
-class formulario extends FormRequest
+class contacto extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,16 +24,16 @@ class formulario extends FormRequest
     public function rules()
     {
         return [
-        'nombre'=>'required',
-        'fechaNacimiento'=>'required'
+            'nombre'=>'required',
+            'email'=>'required',
+            'texto'=>'required'
         ];
     }
-    public function messages()
-    {
+    public function messages(){
         return[
-        'nombre.required'=>'El campo nombre es obligatorio',
-        'fechaNacimiento.required'=>'El campo fecha de nacimiento es obligatorio'
-         ];
+            'nombre.required'=>'El campo nombre es obligatorio',
+            'email.required'=>'El campo email es obligatorio',
+            'texto.required'=>'El campo texto es obligatorio'
+        ];
     }
-   
 }

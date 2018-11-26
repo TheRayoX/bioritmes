@@ -32,3 +32,4 @@ Route::get('/cookies', function(){
 Route::get('/contacto', function(){
     return view('contacto');
 });
+Route::post('/contacto-form', 'bioController@storeContacto');

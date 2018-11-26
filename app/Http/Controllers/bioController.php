@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\formulario;
+use App\Http\Requests\contacto;
 use Illuminate\Http\Request;
 use App\usuario;
 
@@ -59,8 +60,10 @@ class bioController extends Controller
         $usuario->setFechaNacimiento($fecha);
         $request->session()->put('nuevoUsuario',$usuario);
         return redirect('/graficos');
-        
+    }
 
+    public function storeContacto(contacto $request){
+        return view('contacto');
     }
     
 

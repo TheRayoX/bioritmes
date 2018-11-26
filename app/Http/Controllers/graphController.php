@@ -66,7 +66,7 @@ class graphController extends Controller
              ->addRow([$fechas[30], $emocional[30] , $fisico[30], $intelectual[30]]);
 
         $lava->LineChart('bioR', $biorritmo, [
-            'title' => 'afas'
+            
         ]);
         return view('form', [
             'lava'      => $lava
