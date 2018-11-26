@@ -13,7 +13,7 @@ class graphController extends Controller
         $usuario = $request->session()->get('nuevoUsuario');
         $grafico = new grafico();
         $request->session()->put('nuevoGrafico',$grafico);
-        $this->create($request);
+        //$this->create($request);
         return redirect('/form');
     }
 
