@@ -32,9 +32,22 @@
                 <a class="text-light mr-5" href="/login" style="text-decoration:none;">Calculadora</a>
                 @if(Session::has('nuevoUsuario'))
                 <a class="text-light" href="/form" style="text-decoration:none;">Resultado</a>
+                @else
+                <a class="text-light disabled" href="#" style="text-decoration:none;">Resultado</a>
                 @endif
               </nav>
 			    </div>
+          @if(Session::has('nuevoUsuario'))
+              <div class="dropdown">
+              <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false" style="font-size:25px;">
+              <i class="far fa-user"></i> {{ Session::get('nuevoUsuario')->getNombre() }}
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><i class="far fa-user mr-2"></i>Perfil</a>
+                <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Cerrar Sesión</a>
+              </div>
+              </div>
+            @endif
         </nav>
         <!-- FIN NAVBAR -->
         <!-- INICIO CONTENIDO -->
