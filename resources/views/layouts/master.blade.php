@@ -24,7 +24,20 @@
 			      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 			        <span class="navbar-toggler-icon"></span>
 			 	    </button>
+             @if(Session::has('nuevoUsuario'))
 			  	  <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+              <nav class="cl-effect-14" style="margin-left:100px;">
+                <a class="text-light mr-5" href="/" style="text-decoration:none;">Inicio</a>
+                <a class="text-light mr-5" href="/login" style="text-decoration:none;">Calculadora</a>
+                @if(Session::has('nuevoUsuario'))
+                <a class="text-light" href="/form" style="text-decoration:none;">Resultado</a>
+                @else
+                <a class="text-light disabled" href="#" style="text-decoration:none;">Resultado</a>
+                @endif
+              </nav>
+			    </div>
+          @else
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
               <nav class="cl-effect-14" style="margin-left:-10px;">
                 <a class="text-light mr-5" href="/" style="text-decoration:none;">Inicio</a>
                 <a class="text-light mr-5" href="/login" style="text-decoration:none;">Calculadora</a>
@@ -35,10 +48,11 @@
                 @endif
               </nav>
 			    </div>
+          @endif
           @if(Session::has('nuevoUsuario'))
               <div class="dropdown">
               <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false" style="font-size:25px;">
-              <i class="far fa-user"></i> {{ Session::get('nuevoUsuario')->getNombre() }}
+              <i class="far fa-user mr-2"></i> {{ Session::get('nuevoUsuario')->getNombre() }}
               </button>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item" href="#"><i class="far fa-user mr-2"></i>Perfil</a>
