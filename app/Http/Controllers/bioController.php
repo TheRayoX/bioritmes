@@ -111,4 +111,11 @@ class bioController extends Controller
     {
         //
     }
+
+    public function logout(Request $request){
+        if($request->session()->has('nuevoUsuario')){
+            $request->session()->flush();
+            return redirect('/');
+        }
+    }
 }

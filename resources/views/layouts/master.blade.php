@@ -56,7 +56,7 @@
               </button>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item" href="#"><i class="far fa-user mr-2"></i>Perfil</a>
-                <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Cerrar Sesión</a>
+                <a class="dropdown-item" href="/logout"><i class="fas fa-power-off mr-2"></i>Cerrar Sesión</a>
               </div>
               </div>
             @endif

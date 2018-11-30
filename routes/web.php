@@ -12,23 +12,18 @@
 */
 
 Route::get('/', 'bioController@index');
-
 Route::get('/login', 'bioController@index'); 
-
 Route::post('/form', 'bioController@store');
 Route::get('/form', 'graphController@create');
 Route::post('/form2', 'graphController@store');
-
 Route::get('/graficos','graphController@index');
-
+Route::get('/logout', 'bioController@logout');
 Route::get('/avisolegal', function(){
     return view('avisolegal');
 });
 Route::get('/cookies', function(){
     return view('cookies');
 });
-
-/* PROVISIONAL */
 Route::get('/contacto', function(){
     return view('contacto');
 });
