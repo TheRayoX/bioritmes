@@ -22,7 +22,7 @@
         <div class="flex-center position-ref full-height">
           <!-- INICIO NAVBAR -->
         	<nav class="navbar navbar-expand-sm" style="background-color:#b22222; font-family:'Amatic SC'; font-size:25px;">
-			      <a class="navbar-brand text-light" href="#">LOGO</a>
+			      <a class="navbar-brand text-light" href="/">LOGO</a>
 			      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 			        <span class="navbar-toggler-icon"></span>
 			 	    </button>
@@ -30,7 +30,9 @@
               <nav class="cl-effect-14" style="margin-left:-10px;">
                 <a class="text-light mr-5" href="/" style="text-decoration:none;">Inicio</a>
                 <a class="text-light mr-5" href="/login" style="text-decoration:none;">Calculadora</a>
+                @if(Session::has('nuevoUsuario'))
                 <a class="text-light" href="/form" style="text-decoration:none;">Resultado</a>
+                @endif
               </nav>
 			    </div>
         </nav>
