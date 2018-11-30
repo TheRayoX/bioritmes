@@ -5,7 +5,7 @@
       {!! $lava->render('LineChart', 'bioR', 'chart-div') !!}
 </div>
 </div>
-<div class="container text-justify mt-3" style="font-size:14px;">
+<div class="container text-center mt-3 w-25" style="font-size:14px;">
 	<form method="post" action="/form2">
       	{{ csrf_field() }}
         <div class="form-group">
