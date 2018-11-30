@@ -40,7 +40,7 @@
               <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false" style="font-size:25px;">
               <i class="far fa-user"></i> {{ Session::get('nuevoUsuario')->getNombre() }}
               </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item" href="#"><i class="far fa-user mr-2"></i>Perfil</a>
                 <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Cerrar Sesión</a>
               </div>
