@@ -9,11 +9,11 @@
 	<form method="post" action="/form2">
       	{{ csrf_field() }}
         <div class="form-group">
-          <label for="fechaNacimiento">Fecha Nacimiento</label>
+          <label for="fechaNacimiento" class="font-weight-bold">Fecha Nacimiento</label>
           <input type="date" class="form-control text-center" name="fechaNacimiento">
         </div>
          <div class="form-group">
-          <label for="fechaSistema">Fecha</label>
+          <label for="fechaSistema" class="font-weight-bold">Fecha</label>
           <input type="date" class="form-control text-center" name="fechaSistema">
         </div>
         <button type="submit" class="btn btn-primary">Enviar</button>
@@ -23,21 +23,21 @@
 		<div class="row mt-3">
 			<div class="offset-2 col-2 border rounded bg-danger">
 				<p class="m-0 text-center mt-1">Fisico</p>
-				<h2>{{$resultado[3]}}%</h2>
+				<h2 class="font-weight-bold">{{$resultado[3]}}%</h2>
 			</div>
 			<p class="mt-4 ml-3">{{$resultado[0]}}</p>
 		</div>
 		<div class="row mt-2">
 			<div class="offset-2 col-2 border rounded bg-warning">
-			<p class="m-0 text-center">Intelectual</p>
-			<h2>{{$resultado[4]}}%</h2>
+			<p class="m-0 text-center mt-1">Intelectual</p>
+			<h2 class="font-weight-bold">{{$resultado[4]}}%</h2>
 			</div>
 			<p class="mt-4 ml-3">{{$resultado[1]}}</p>
 		</div>
 		<div class="row mt-2">
 			<div class="offset-2 col-2 border rounded bg-primary">
-			<p class="m-0 text-center">Emocional</p>
-			<h2>{{$resultado[5]}}%</h2>
+			<p class="m-0 text-center mt-1">Emocional</p>
+			<h2 class="font-weight-bold">{{$resultado[5]}}%</h2>
 			</div>
 			<p class="mt-4 ml-3">{{$resultado[2]}}</p>
 		</div>
