@@ -28,6 +28,18 @@ class bioController extends Controller
         else if($ruta == 'form'){
         return view('form');
         }
+        else if($ruta == 'contacto'){
+            return view('contacto');
+        }
+        else if($ruta == 'avisolegal'){
+            return view('avisolegal');
+        }
+        else if($ruta == 'cookies'){
+            return view('cookies');
+        }
+        else if($ruta == 'perfil'){
+            return view('perfil');
+        }
        
     }
 

@@ -168,54 +168,54 @@ class grafico extends Model
     	$emocionalSiguiente = $this->emocional[16];
     	//calculo resultados fisico (resultado[0])
     	if($fisicoActual<0){
-    		$this->resultado[0] = "Tu nivel fisico esta en negativo.";
+    		$this->resultado[0] = "Tu nivel físico está en negativo.";
     	}
     	else if($fisicoActual>0){
-    		$this->resultado[0] = "Tu nivel fisico esta en positivo.";
+    		$this->resultado[0] = "Tu nivel fisico está en positivo.";
     	}
     	else{
-    		$this->resultado[0] = "Tu nivel fisico esta en posición neutral.";
+    		$this->resultado[0] = "Tu nivel físico está en posición neutral.";
     	}
     	//compruebo si la tendencia es subir o bajar
     	if($fisicoActual<$fisicoSiguiente){
-    		$this->resultado[0] = $this->resultado[0]." En los siguientes dias tu nivel fisico subirá";
+    		$this->resultado[0] = $this->resultado[0]." En los siguientes días tu nivel físico subirá.";
     	}
     	else{
-    		$this->resultado[0] = $this->resultado[0]." En los siguientes dias tu nivel fisico bajará";
+    		$this->resultado[0] = $this->resultado[0]." En los siguientes días tu nivel físico bajará.";
     	}
     	//calculo resultados intelectual(resultado[1])
     	if($intelectoActual<0){
-    		$this->resultado[1] = "Tu nivel intelectual esta en negativo.";
+    		$this->resultado[1] = "Tú nivel intelectual está en negativo.";
     	}
     	else if($intelectoActual>0){
-    		$this->resultado[1] = "Tu nivel intelectual esta en positivo.";
+    		$this->resultado[1] = "Tú nivel intelectual está en positivo.";
     	}
     	else{
-    		$this->resultado[1] = "Tu nivel intelectual esta en posición neutral.";
+    		$this->resultado[1] = "Tú nivel intelectual está en posición neutral.";
     	}
     	//compruebo si la tendencia es subir o bajar
     	if($intelectoActual<$intelectoSiguiente){
-    		$this->resultado[1] = $this->resultado[1]." En los siguientes dias tu nivel intelectual subirá.";
+    		$this->resultado[1] = $this->resultado[1]." En los siguientes días tu nivel intelectual subirá.";
     	}
     	else{
-    		$this->resultado[1] = $this->resultado[1]." En los siguientes dias tu nivel intelectual bajará.";
+    		$this->resultado[1] = $this->resultado[1]." En los siguientes días tu nivel intelectual bajará.";
     	}
     	//calculo resultados emocional(resultado[2])
     	if($emocionalActual<0){
-    		$this->resultado[2] = "Tu nivel emocional esta en negativo.";
+    		$this->resultado[2] = "Tú nivel emocional está en negativo.";
     	}
     	else if($emocionalActual>0){
-    		$this->resultado[2]= "Tu nivel emocional esta en positivo.";
+    		$this->resultado[2]= "Tú nivel emocional está en positivo.";
     	}
     	else{
-    		$this->resultado[2] = "Tu nivel emocional esta en posición neutral.";
+    		$this->resultado[2] = "Tú nivel emocional está en posición neutral.";
     	}
     	//compruebo si la tendencia es subir o bajar
     	if($emocionalActual<$emocionalSiguiente){
-    		$this->resultado[2] = $this->resultado[2]." En los siguientes dias tu nivel emocional subirá.";
+    		$this->resultado[2] = $this->resultado[2]." En los siguientes días tu nivel emocional subirá.";
     	}
     	else{
-    		$this->resultado[2] = $this->resultado[2]." En los siguientes dias tu nivel emocional bajará.";
+    		$this->resultado[2] = $this->resultado[2]." En los siguientes días tu nivel emocional bajará.";
     	}
 
     }

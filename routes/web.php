@@ -18,13 +18,9 @@ Route::get('/form', 'graphController@create');
 Route::post('/form2', 'graphController@store');
 Route::get('/graficos','graphController@index');
 Route::get('/logout', 'bioController@logout');
-Route::get('/avisolegal', function(){
-    return view('avisolegal');
-});
-Route::get('/cookies', function(){
-    return view('cookies');
-});
-Route::get('/contacto', function(){
-    return view('contacto');
-});
+Route::get('/contacto', 'bioController@index');
+Route::get('/avisolegal', 'bioController@index');
+Route::get('/cookies', 'bioController@index');
+Route::get('/perfil', 'bioController@index');
+
 Route::post('/contacto-form', 'bioController@storeContacto');

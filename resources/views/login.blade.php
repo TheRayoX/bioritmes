@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
+@if(!Session::has('nuevoUsuario'))
 <div class="container text-center mt-5">
   <h2>Calcular Biorritmos</h2>
   <div class="row">
@@ -59,5 +60,7 @@
     </div>
   </div>
 </div>
-                
+@else
+<script>window.location = "/form";</script>
+@endif
 @stop
