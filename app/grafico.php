@@ -168,13 +168,13 @@ class grafico extends Model
     	$emocionalSiguiente = $this->emocional[16];
     	//calculo resultados fisico (resultado[0])
     	if($fisicoActual<0){
-    		$this->resultado[0] = "Tu nivel físico está en negativo.";
+    		$this->resultado[0] = "Tú nivel físico está en negativo.";
     	}
     	else if($fisicoActual>0){
-    		$this->resultado[0] = "Tu nivel fisico está en positivo.";
+    		$this->resultado[0] = "Tú nivel fisico está en positivo.";
     	}
     	else{
-    		$this->resultado[0] = "Tu nivel físico está en posición neutral.";
+    		$this->resultado[0] = "Tú nivel físico está en posición neutral.";
     	}
     	//compruebo si la tendencia es subir o bajar
     	if($fisicoActual<$fisicoSiguiente){

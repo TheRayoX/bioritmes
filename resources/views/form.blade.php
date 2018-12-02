@@ -18,29 +18,28 @@
         </div>
         <button type="submit" class="btn btn-primary">Enviar</button>
       </form>
-
 </div>
-<div class="container text-center mb-3">
-	<div class="row mt-3">
-	<div class="offset-2 col-2 border rounded bg-danger">
-	<p class="m-0 text-center">Fisico</p>
-	<h2>{{$resultado[3]}}%</h2>
-	</div>
-	<p class="mt-4 ml-3">{{$resultado[0]}}</p>
-	</div>
-	<div class="row mt-2">
-	<div class="offset-2 col-2 border rounded bg-warning">
-	<p class="m-0 text-center">Intelectual</p>
-	<h2>{{$resultado[4]}}%</h2>
-	</div>
-	<p class="mt-4 ml-3">{{$resultado[1]}}</p>
-	</div>
-	<div class="row mt-2">
-	<div class="offset-2 col-2 border rounded bg-primary">
-	<p class="m-0 text-center">Emocional</p>
-	<h2>{{$resultado[5]}}%</h2>
-	</div>
-	<p class="mt-4 ml-3">{{$resultado[2]}}</p>
-	</div>
+	<div class="container text-center mb-3">
+		<div class="row mt-3">
+			<div class="offset-2 col-2 border rounded bg-danger">
+				<p class="m-0 text-center mt-1">Fisico</p>
+				<h2>{{$resultado[3]}}%</h2>
+			</div>
+			<p class="mt-4 ml-3">{{$resultado[0]}}</p>
+		</div>
+		<div class="row mt-2">
+			<div class="offset-2 col-2 border rounded bg-warning">
+			<p class="m-0 text-center">Intelectual</p>
+			<h2>{{$resultado[4]}}%</h2>
+			</div>
+			<p class="mt-4 ml-3">{{$resultado[1]}}</p>
+		</div>
+		<div class="row mt-2">
+			<div class="offset-2 col-2 border rounded bg-primary">
+			<p class="m-0 text-center">Emocional</p>
+			<h2>{{$resultado[5]}}%</h2>
+			</div>
+			<p class="mt-4 ml-3">{{$resultado[2]}}</p>
+		</div>
 </div>
 @stop

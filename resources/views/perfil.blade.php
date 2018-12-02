@@ -203,12 +203,8 @@
             </div>
         </div>
         <div class="col-lg-4 order-lg-1 text-center mt-3">
-            <h2 class="mb-2 font-weight-bold">{{ Session::get('nuevoUsuario')->getNombre() }}</h2>
-            <img src="img/avatar.png" class="mx-auto img-fluid img-circle d-block" alt="avatar">
-            <label class="custom-file" style="margin-top:-25px;">
-                <input type="file" id="file" class="custom-file-input">
-                <p class="custom-file-control text-light border border-success bg-success rounded">Escoger Archivo</p>
-            </label>
+            <h2 class="mb-2 font-weight-bold text-danger">{{ Session::get('nuevoUsuario')->getNombre() }}</h2>
+            <img src="img/avatar.png" class="mx-auto img-fluid img-circle d-block" style="max-width:300px;">
         </div>
     </div>
 </div>
