@@ -20,4 +20,27 @@
       </form>
 
 </div>
+<div class="container">
+	<div class="row">
+	<div class="col-1 bg-danger">
+	<p class="m-0 font-weight-bold">Fisico</p>
+	<h2>{{$resultado[3]}}%</h2>
+	</div>
+	<p>{{$resultado[0]}}</p>
+	</div>
+	<div class="row">
+	<div class="col-1 bg-warning">
+	<p class="m-0 font-weight-bold">Intelectual</p>
+	<h2>{{$resultado[4]}}%</h2>
+	</div>
+	<p>{{$resultado[1]}}</p>
+	</div>
+	<div class="row">
+	<div class="col-1 bg-primary">
+	<p class="m-0 font-weight-bold">Emocional</p>
+	<h2>{{$resultado[5]}}%</h2>
+	</div>
+	<p>{{$resultado[2]}}</p>
+	</div>
+</div>
 @stop

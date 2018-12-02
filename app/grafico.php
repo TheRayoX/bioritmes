@@ -12,6 +12,7 @@ class grafico extends Model
     private $intelectual;
     private $emocional;
     private $fechas;
+    private $resultado;
 
     public function __construct(){
     $this->fechaSistema();
@@ -57,6 +58,12 @@ class grafico extends Model
     public function setIntelectual($intelectual){
         $this->intelectual=$intelectual;
     }
+     public function getResultado(){
+        return $this->resultado;
+    }
+    public function setResultado($resultado){
+        $this->resultado=$resultado;
+    }
 //De momento he añadido al array correspondiente el valor de todos los dias en un periodo de 30, donde el dia de hoy és el 15
 //He comprobado que funciona correctamente con algunas calculadoras de internet, te dejo los echo hechos para que puedas consultar
 //funcion que engloba todos los calculos que necesita el gràfico
@@ -65,6 +72,7 @@ class grafico extends Model
     	$this->calculaFisico();
         $this->calculaIntelectual();
         $this->calculaFecha();
+        $this->calculaResultado();
         }
 //calculos de cada uno de los biorritmos
     public function calculaEmocional(){
@@ -150,6 +158,66 @@ class grafico extends Model
             $this->fechas[$i] = $datetime;
             $contador++;
             }
+    }
+    public function calculaResultado(){
+    	$fisicoActual = $this->fisico[15];
+    	$intelectoActual = $this->intelectual[15];
+    	$emocionalActual = $this->emocional[15];
+    	$fisicoSiguiente = $this->fisico[16];
+    	$intelectoSiguiente = $this->intelectual[16];
+    	$emocionalSiguiente = $this->emocional[16];
+    	//calculo resultados fisico (resultado[0])
+    	if($fisicoActual<0){
+    		$this->resultado[0] = "Tu nivel fisico esta en negativo.";
+    	}
+    	else if($fisicoActual>0){
+    		$this->resultado[0] = "Tu nivel fisico esta en positivo.";
+    	}
+    	else{
+    		$this->resultado[0] = "Tu nivel fisico esta en posición neutral.";
+    	}
+    	//compruebo si la tendencia es subir o bajar
+    	if($fisicoActual<$fisicoSiguiente){
+    		$this->resultado[0] = $this->resultado[0]." En los siguientes dias tu nivel fisico subirá";
+    	}
+    	else{
+    		$this->resultado[0] = $this->resultado[0]." En los siguientes dias tu nivel fisico bajará";
+    	}
+    	//calculo resultados intelectual(resultado[1])
+    	if($intelectoActual<0){
+    		$this->resultado[1] = "Tu nivel intelectual esta en negativo.";
+    	}
+    	else if($intelectoActual>0){
+    		$this->resultado[1] = "Tu nivel intelectual esta en positivo.";
+    	}
+    	else{
+    		$this->resultado[1] = "Tu nivel intelectual esta en posición neutral.";
+    	}
+    	//compruebo si la tendencia es subir o bajar
+    	if($intelectoActual<$intelectoSiguiente){
+    		$this->resultado[1] = $this->resultado[1]." En los siguientes dias tu nivel intelectual subirá.";
+    	}
+    	else{
+    		$this->resultado[1] = $this->resultado[1]." En los siguientes dias tu nivel intelectual bajará.";
+    	}
+    	//calculo resultados emocional(resultado[2])
+    	if($emocionalActual<0){
+    		$this->resultado[2] = "Tu nivel emocional esta en negativo.";
+    	}
+    	else if($emocionalActual>0){
+    		$this->resultado[2]= "Tu nivel emocional esta en positivo.";
+    	}
+    	else{
+    		$this->resultado[2] = "Tu nivel emocional esta en posición neutral.";
+    	}
+    	//compruebo si la tendencia es subir o bajar
+    	if($emocionalActual<$emocionalSiguiente){
+    		$this->resultado[2] = $this->resultado[2]." En los siguientes dias tu nivel emocional subirá.";
+    	}
+    	else{
+    		$this->resultado[2] = $this->resultado[2]." En los siguientes dias tu nivel emocional bajará.";
+    	}
+
     }
    
 

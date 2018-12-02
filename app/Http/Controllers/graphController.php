@@ -23,11 +23,14 @@ class graphController extends Controller
         $usuario = $request->session()->get('nuevoUsuario');
         $grafico->setFecha($usuario->getFechaNacimiento());
         $grafico->calcularBiorritmo();
-        $grafico->calculaFecha();
         $emocional = $grafico->getEmocional();
         $fisico = $grafico->getFisico();
         $intelectual = $grafico->getIntelectual();
         $fechas = $grafico->getFechas();
+        $resultado = $grafico->getResultado();
+        $resultado[3] = $fisico[15];
+        $resultado[4] = $intelectual[15];
+        $resultado[5] = $emocional[15];
         $biorritmo = $lava->DataTable();
         $biorritmo->addDateColumn('Fecha')
              ->addNumberColumn('Emocional')
@@ -70,7 +73,7 @@ class graphController extends Controller
         ]);
         return view('form', [
             'lava'      => $lava
-        ]);
+        ],['resultado' => $resultado]);
     }
      public function store(Request $request)
     {
