@@ -1,7 +1,8 @@
 @extends('layouts.master')
 @section('content')
 <div class="container m-auto" style="width:65%;">
-<div id="chart-div" class="mt-5">
+<h2 class="text-center font-weight-bold mt-3">Gráfico</h2>
+<div id="chart-div">
       {!! $lava->render('LineChart', 'bioR', 'chart-div') !!}
 </div>
 </div>
@@ -19,6 +20,7 @@
         <button type="submit" class="btn btn-primary">Enviar</button>
       </form>
 </div>
+<h2 class="text-center font-weight-bold mt-3">Resultados</h2>
 	<div class="container mb-3">
 		<div class="row mt-3">
 			<div class="offset-1 col-2 border rounded bg-danger">
