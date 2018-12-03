@@ -24,8 +24,8 @@ class contacto extends FormRequest
     public function rules()
     {
         return [
-            'nombre'=>'required',
-            'email'=>'required',
+            'nombre'=>'required|max:12',
+            'email'=>'required|email|max:255',
             'texto'=>'required'
         ];
     }
@@ -33,7 +33,9 @@ class contacto extends FormRequest
         return[
             'nombre.required'=>'El campo nombre es obligatorio',
             'email.required'=>'El campo email es obligatorio',
-            'texto.required'=>'El campo texto es obligatorio'
+            'texto.required'=>'El campo texto es obligatorio',
+            'nombre.max' =>'El campo nombre no puede tener más de 12 carácteres',
+            'email.email' =>'El campo email no tiene un formato válido'
         ];
     }
 }

@@ -18,7 +18,7 @@
                 <label for="exampleFormControlTextarea1">Texto</label>
                 <textarea name="texto" class="form-control text-justify w-100" rows="5" placeholder="Escribe lo que quieras enviarnos"></textarea>
             </div>
-            <input type="submit" value="Enviar" class="btn btn-primary">
+            <input type="submit" value="Enviar" id="btn-contact" class="btn btn-primary">
         </form>
         </div>
         </div>
