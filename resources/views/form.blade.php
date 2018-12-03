@@ -25,21 +25,27 @@
 				<p class="m-0 text-center mt-1">Fisico</p>
 				<h2 class="font-weight-bold">{{$resultado[3]}}%</h2>
 			</div>
-			<p class="mt-4 ml-3">{{$resultado[0]}}</p>
+			<div class="col-8">
+			<p class="mt-2 ml-3">{{$resultado[0]}}</p>
+		    </div>
 		</div>
 		<div class="row mt-2">
 			<div class="offset-2 col-2 border rounded bg-warning">
 			<p class="m-0 text-center mt-1">Intelectual</p>
 			<h2 class="font-weight-bold">{{$resultado[4]}}%</h2>
 			</div>
-			<p class="mt-4 ml-3">{{$resultado[1]}}</p>
+			<div class="col-8">
+			<p class="mt-2 ml-3">{{$resultado[1]}}</p>
+		    </div>
 		</div>
 		<div class="row mt-2">
 			<div class="offset-2 col-2 border rounded bg-primary">
 			<p class="m-0 text-center mt-1">Emocional</p>
 			<h2 class="font-weight-bold">{{$resultado[5]}}%</h2>
 			</div>
-			<p class="mt-4 ml-3">{{$resultado[2]}}</p>
+			<div class="col-8">
+			<p class="mt-2 ml-3">{{$resultado[2]}}</p>
+		    </div>
 		</div>
 </div>
 @stop
