@@ -28,11 +28,11 @@
 			  	  <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
               <nav class="cl-effect-14" style="margin-left:100px;">
                 <a class="text-light mr-5" href="/" style="text-decoration:none;">Inicio</a>
-                <a class="text-light mr-5" href="/login" style="text-decoration:none;">Calculadora</a>
+                <a class="text-light mr-5" href="/login" style="text-decoration:none;">Login</a>
                 @if(Session::has('nuevoUsuario'))
-                <a class="text-light" href="/form" style="text-decoration:none;">Resultado</a>
+                <a class="text-light" href="/form" style="text-decoration:none;">Calculadora</a>
                 @else
-                <a class="text-light disabled" href="#" style="text-decoration:none;">Resultado</a>
+                <a class="text-light disabled" href="#" style="text-decoration:none;">Calculadora</a>
                 @endif
               </nav>
 			    </div>
