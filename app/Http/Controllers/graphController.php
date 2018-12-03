@@ -83,9 +83,17 @@ class graphController extends Controller
         if($request->input('fechaNacimiento')!=""){
         $fecha = $request->input('fechaNacimiento');
     }
+        else{
+        $fecha = $usuario->getFechaNacimiento();
+    }
          if($request->input('fechaSistema')!=""){
+        
         $fechaSistema = $request->input('fechaSistema');
     }
+            else{
+        $fechaSistema = $grafico->getFechaSistema();
+    }
+
         if($fecha<$fechaSistema){
           $usuario->setFechaNacimiento($fecha);
           $grafico->setFechaSistema($fechaSistema);
