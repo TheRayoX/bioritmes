@@ -18,6 +18,7 @@ class graphController extends Controller
     }
 
     public function create(Request $request){
+        if($request->session()->has('nuevoGrafico')){
         $lava = new Lavacharts;
         $grafico = $request->session()->get('nuevoGrafico');
         $usuario = $request->session()->get('nuevoUsuario');
@@ -75,6 +76,10 @@ class graphController extends Controller
             'lava'      => $lava
         ],['resultado' => $resultado]);
     }
+    else{
+        return redirect('/');
+    }
+    }
      public function store(Request $request)
     {
         //guarda la validación hecha en el formulario
@@ -99,7 +104,7 @@ class graphController extends Controller
           $grafico->setFechaSistema($fechaSistema);
       }
         else{
-            //eror
+           //error
         }
 
          $this->create($request);
