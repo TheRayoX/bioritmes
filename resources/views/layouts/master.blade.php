@@ -70,8 +70,9 @@
               </div>
             </div>
           </div>
-        <!-- INICIO FOOTER -->
-        <div class="container-fluid footer mt-3 " style="background-color:#b22222;">
+      </div>
+              <!-- INICIO FOOTER -->
+              <div class="container-fluid footer mt-3 " style="background-color:#b22222;">
           <div class="row mt-2 mb-3">
             <div class="col-12">
               <nav class="navbar navbar-expand-sm" style="background-color:#b22222; font-family:'Amatic SC'; font-size:25px;">
@@ -92,6 +93,5 @@
     			</div>
         </div>
         <!-- FIN FOOTER -->
-      </div>
     </body>
 </html>
