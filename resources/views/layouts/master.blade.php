@@ -20,7 +20,7 @@
         <div class="flex-center position-ref full-height">
           <!-- INICIO NAVBAR -->
         	<nav class="navbar navbar-expand-sm" style="background-color:#b22222; font-family:'Amatic SC'; font-size:25px;">
-			      <img src="img/logo.png" style="max-width:125px;"/>
+			      <a href="/"><img src="img/logo.png" style="max-width:125px;"/></a>
 			      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 			        <span class="navbar-toggler-icon"></span>
 			 	    </button>
