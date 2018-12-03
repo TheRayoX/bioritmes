@@ -178,7 +178,7 @@ class grafico extends Model
     	}
     	//compruebo si la tendencia es subir o bajar
     	if($fisicoActual<$fisicoSiguiente){
-    		$this->resultado[0] = $this->resultado[0]." En los siguientes días tu nivel físico subirá, apuntate al gym o haz algo productivo.";
+    		$this->resultado[0] = $this->resultado[0]." En los siguientes días tu nivel físico subirá, apuntate al gym o haz algo productivo de una vez.";
     	}
     	else{
     		$this->resultado[0] = $this->resultado[0]." En los siguientes días tu nivel físico bajará, no te mueras subiendo hasta la tercera planta.";
