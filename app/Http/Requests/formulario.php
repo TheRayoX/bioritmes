@@ -42,4 +42,5 @@ class formulario extends FormRequest
 
          ];
     }
+}
    
