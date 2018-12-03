@@ -22,19 +22,24 @@ class formulario extends FormRequest
      *
      * @return array
      */
-    public function rules()
+       public function rules()
     {
         return [
-        'nombre'=>'required',
-        'fechaNacimiento'=>'required'
+        'nombre'=>'required|max:12',
+        'fechaNacimiento'=>'required|date|date_format:Y-m-d|before:tomorrow'
         ];
     }
     public function messages()
     {
         return[
         'nombre.required'=>'El campo nombre es obligatorio',
-        'fechaNacimiento.required'=>'El campo fecha de nacimiento es obligatorio'
+        'nombre.max'=>'El campo nombre no puede tener más de 12 carácteres',
+        'fechaNacimiento.required'=>'El campo fecha de nacimiento es obligatorio',
+        'fechaNacimiento.before' =>'La fecha no puede ser superior al dia de hoy',
+        'fechaNacimiento.date' =>'Formato no válido',
+        'fechaNacimiento.date_format' =>'Formato de la fecha no válido'
+
+
          ];
     }
    
-}
