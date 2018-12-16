@@ -7,6 +7,7 @@
 </div>
 </div>
 <div class="container text-center mt-3 w-25" style="font-size:14px;">
+		@include('error')
 	<form method="post" action="/form2">
       	{{ csrf_field() }}
         <div class="form-group">

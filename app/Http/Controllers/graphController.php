@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\grafico;
 use Khill\Lavacharts\Lavacharts;
+use App\Http\Requests\formulario2;
 
 class graphController extends Controller
 {
@@ -80,7 +81,7 @@ class graphController extends Controller
         return redirect('/');
     }
     }
-     public function store(Request $request)
+     public function store(Request $request, formulario2 $request2)
     {
         //guarda la validación hecha en el formulario
         $usuario = $request->session()->get('nuevoUsuario');
@@ -110,6 +111,6 @@ class graphController extends Controller
          $this->create($request);
         return redirect('/form');
         
-
+        return view('/form');
     }
 }
