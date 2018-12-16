@@ -24,8 +24,8 @@ class formulario2 extends FormRequest
     public function rules()
     {
         return [
-            'fechaNacimiento'=> 'required|date|date_format:Y-m-d|before:today',
-            'fechaSistema' =>'required|date|date_format:Y-m-d|after:today'
+            'fechaNacimiento'=> 'required|date|date_format:Y-m-d|before:tomorrow',
+            'fechaSistema' =>'required|date|date_format:Y-m-d|after:yesterday'
         ];
     }
 
