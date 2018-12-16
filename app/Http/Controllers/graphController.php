@@ -93,7 +93,5 @@ class graphController extends Controller
 
          $this->create($request);
         return redirect('/form');
-        
-        return view('/form');
     }
 }
