@@ -19,7 +19,7 @@
 </div>
 <div class="row mt-3">
 <div class="col-7 offset-1 pr-0">
-	<p>Mi nombre es Albert Martín, peró me llaman Rayo, y tengo 20 años. Actualmente estoy estudiando el CFGS de Desarrollo de Aplicaciones Web. Mis hobbies són jugar a videojuegos y ver series/películas.</p>
+	<p>Mi nombre es Albert Martín, peró me llaman Rayo, y tengo 20 años. Actualmente estoy estudiando el CFGS de Desarrollo de Aplicaciones Web. Mis hobbies són jugar a videojuegos y ver series/películas. Mis aficiones en mi tiempo libre son ver a un mapache o gato con problemas de obesidad y ver al <a href="https://www.twitch.tv/elxokas/clip/StormyMiniatureCroquetteDeIlluminati?filter=clips&range=all&sort=time">ELXOKAS</a>.</p>
 </div>
 <div class="offset-1 col-2">
 	<img src="img/albert.jpg" style="max-width:150px;max-height:150px;"/>
