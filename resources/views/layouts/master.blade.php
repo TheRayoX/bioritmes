@@ -4,8 +4,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <title>Biorritmos DUAL</title>
-
+        <title>Biorhythm</title>
+        <link rel="icon" 
+      type="image/png" 
+      href="img/logo.png">
         <!-- BootStrap -->
         <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
         <link href="{{ asset('css/style.css') }}" rel="stylesheet">
